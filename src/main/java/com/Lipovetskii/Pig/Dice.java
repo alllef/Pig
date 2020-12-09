@@ -12,6 +12,7 @@ public class Dice {
     static Image dice = new Image("img/edge1.jpg", "dice");
 
     static {
+        dice.getStyle().set("margin-left","auto").set("margin-right","auto");
         parseImagesDirectory();
     }
 
@@ -27,9 +28,8 @@ public class Dice {
 
     public static int roll() {
         int result = (int) (Math.random() * 6);
-        dice.setSrc("img/"+diceImagesRoute.get(result));
+
         return result+1;
     }
-
 
 }
